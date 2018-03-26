@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title of the document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            margin-bottom: 20px;
+
+        }
+        div:hover {
+            opacity: 0.5;
+        }
+
+        .container {
+            width: 100vw;
+            background-color: #477187;
+            height: 62.5vw;
+        }
+
+        .container>.block {
+            background-color: #6F90A2;
+
+        }
+
+        .block,
+            {
+            width: 25vw;
+            height: 25vw;
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+
+        div.block,
+        .stroked {
+            width: 25vw;
+            height: 25vw;
+            margin-left: 0;
+            margin-bottom: 10px;
+            background-color: #477187;
+        }
+
+        div.block.stroked {
+            border: 6px solid black;
+        }
+
+        .rectangle>.block {
+
+            height: 25vw;
+            width: 25vw;
+            background-color: red;
+        }
+
+        div.rectangle {
+            width: 60vw;
+            height: 25vw;
+            background: blueviolet;
+        }
+
+        div.rectangle.stroked {
+            background-color: yellow;
+        }
+
+        .text {
+            color: black;
+            font-size: 5vw;
+            text-align: right;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-text {
+            color: black;
+            font-size: 5vw; 
+            float: right;
+        }
+
+        .text,
+        .container-text {
+            padding: 10px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="container-text">Container</span>
+        <div class="block">
+            <p class="text">Block</p>
+        </div>
+        <div class="block">
+            <p class="text">Block</p>
+        </div>
+
+    </div>
+    <!-- end of container -->
+
+    <div class="block stroked">
+        <p class="text">Block Stroked</p>
+    </div>
+    <!-- block stroked -->
+    <div class="rectangle">
+        <span class="container-text">Rectangle</span>
+        <div class="block">
+            <p class="text">Block</p>
+        </div>
+
+    </div>
+    <!-- end of rectangle -->
+
+    <div class="rectangle stroked">
+        <p class="text">Rectangle Stroked</p>
+    </div>
+    <!-- end of rectangle stroked -->
+</body>
+
+</html>
