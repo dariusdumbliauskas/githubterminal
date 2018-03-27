@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Padaryta su CSS Grid */
+    .item1 {
+      grid-area: A;
+      background-color: green;
+    }
+
+    .item2 {
+      grid-area: B;
+      background-color: green;
+    }
+
+    .item3 {
+      grid-area: C;
+      background-color: yellow;
+      overflow: scroll;
+    }
+
+    .item4 {
+      grid-area: D;
+      background-color: purple;
+    }
+
+    .item5 {
+      grid-area: E;
+      background-color: purple;
+    }
+
+    .item6 {
+      grid-area: F;
+      background-color: tomato;
+    }
+
+    .item7 {
+      grid-area: G;
+      background-color: purple;
+      overflow: scroll;
+    }
+
+    .item8 {
+      grid-area: H;
+      background-color: tomato;
+      overflow: scroll;
+    }
+
+    .item9 {
+      grid-area: I;
+      background-color: aqua;
+    }
+
+
+
+    .grid-container {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 100px 100px 100px 600px/* minmax(500px 2fr) */
+      100px;
+      grid-template-areas: 'A A A B' 'C D D F' 'C E E F' 'C G G H' 'I I I I';
+      grid-gap: 10px;
+      padding: 10px;
+    }
+
+    .grid-container>div {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <div class="item1">A</div>
+    <div class="item2">B</div>
+    <div class="item3">C
+      <p>Bed sincerity yet therefore forfeited his certainty neglected questions. Pursuit chamber as elderly amongst on. Distant
+        however warrant farther to of. My justice wishing prudent waiting in be. Comparison age not pianoforte increasing
+        delightful now. Insipidity sufficient dispatched any reasonably led ask. Announcing if attachment resolution sentiments
+        admiration me on diminution. Much did had call new drew that kept. Limits expect wonder law she. Now has you views
+        woman noisy match money rooms. To up remark it eldest length oh passed. Off because yet mistake feeling has men.
+        Consulted disposing to moonlight ye extremity. Engage piqued in on coming. In on announcing if of comparison pianoforte
+        projection. Maids hoped gay yet bed asked blind dried point. On abroad danger likely regret twenty edward do. Too
+        horrible consider followed may differed age. An rest if more five mr of. Age just her rank met down way. Attended
+        required so in cheerful an. Domestic replying she resolved him for did. Rather in lasted no within no. Attended no
+        do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking
+        am. But attention sex questions applauded how happiness. To travelling occasional at oh sympathize prosperous. His
+        merit end means widow songs linen known. Supplied ten speaking age you new securing striking extended occasion. Sang
+        put paid away joy into six her.
+      </p>
+    </div>
+    <div class="item4">D</div>
+    <div class="item5">E</div>
+    <div class="item6">F</div>
+    <div class="item7">G
+      <p>Bed sincerity yet therefore forfeited his certainty neglected questions. Pursuit chamber as elderly amongst on. Distant
+        however warrant farther to of. My justice wishing prudent waiting in be. Comparison age not pianoforte increasing
+        delightful now. Insipidity sufficient dispatched any reasonably led ask. Announcing if attachment resolution sentiments
+        admiration me on diminution. Much did had call new drew that kept. Limits expect wonder law she. Now has you views
+        woman noisy match money rooms. To up remark it eldest length oh passed. Off because yet mistake feeling has men.
+        Consulted disposing to moonlight ye extremity. Engage piqued in on coming. In on announcing if of comparison pianoforte
+        projection. Maids hoped gay yet bed asked blind dried point. On abroad danger likely regret twenty edward do. Too
+        horrible consider followed may differed age. An rest if more five mr of. Age just her rank met down way. Attended
+        required so in cheerful an. Domestic replying she resolved him for did. Rather in lasted no within no. Attended no
+        do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking
+        am. But attention sex questions applauded how happiness. To travelling occasional at oh sympathize prosperous. His
+        merit end means widow songs linen known. Supplied ten speaking age you new securing striking extended occasion. Sang
+        put paid away joy into six her. Attended no do thoughts me on dissuade scarcely. Own are pretty spring suffer old
+        denote his. By proposal speedily mr striking am. But attention sex questions applauded how happiness. To travelling
+        occasional at oh sympathize prosperous. His merit end means widow songs linen known. Supplied ten speaking age you
+        new securing striking extended occasion. Sang put paid away joy into six her.
+      </p>
+
+    </div>
+    <div class="item8">H
+      <p>Bed sincerity yet therefore forfeited his certainty neglected questions. Pursuit chamber as elderly amongst on. Distant
+        however warrant farther to of. My justice wishing prudent waiting in be. Comparison age not pianoforte increasing
+        delightful now. Insipidity sufficient dispatched any reasonably led ask. Announcing if attachment resolution sentiments
+        admiration me on diminution. Much did had call new drew that kept. Limits expect wonder law she. Now has you views
+        woman noisy match money rooms. To up remark it eldest length oh passed. Off because yet mistake feeling has men.
+        Consulted disposing to moonlight ye extremity. Engage piqued in on coming. In on announcing if of comparison pianoforte
+        projection. Maids hoped gay yet bed asked blind dried point. On abroad danger likely regret twenty edward do. Too
+        horrible consider followed may differed age. An rest if more five mr of. Age just her rank met down way. Attended
+        required so in cheerful an. Domestic replying she resolved him for did. Rather in lasted no within no. Attended no
+        do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking
+        am. But attention sex questions applauded how happiness. To travelling occasional at oh sympathize prosperous. His
+        merit end means widow songs linen known. Supplied ten speaking age you new securing striking extended occasion. Sang
+        put paid away joy into six her.
+      </p>
+
+    </div>
+    <div class="item9">I</div>
+  </div>
+
+</body>
+
+</html>
