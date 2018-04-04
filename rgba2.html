@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>rgb</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.container {
+			position: relative;
+			background-color: rgba(66, 66, 66, 0.62);
+			width: 50vw;
+			height: 50vw;
+			margin: auto;
+		}
+
+		#red {
+
+			background-color: rgba(245, 24, 24, 0.7);
+			border: 0.25em solid #f1b2b2;
+            position: relative;
+            top: 0.25em;
+            left: 20%;
+
+		}
+
+		#green {
+
+			background-color: rgba(32, 255, 35, 0.7);
+			border: 0.25em solid #a7fcb1;
+			position: absolute;
+			bottom: 0.25em;
+			left: 0.25em;
+
+		}
+
+		#blue {
+			background-color: rgba(44, 90, 226, 0.7);
+			border: 0.25em solid #021b89;
+			position: absolute;
+			bottom: 0.25em;
+			right: 0.25em;
+		}
+
+		#red,
+		#green,
+		#blue {
+			width: 60%;
+			height: 60%;
+			border-radius: 50%;
+			color: white;
+            font-size: 3em;
+		}
+
+        .t {
+            text-align: center;
+            position: relative;
+            top: calc(50% - 0.5em);
+        }
+	</style>
+</head>
+
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et pellentesque libero. Nam sit amet lacus nec enim lacinia
+		accumsan non molestie nisi. Mauris placerat arcu vel luctus laoreet. Ut est ipsum, consectetur placerat dictum id, maximus
+		sit amet velit. Praesent vel maximus risus. Nunc eget eleifend dui. Aliquam pharetra, magna porta dapibus eleifend, ipsum
+		ligula iaculis mi, vel varius mauris eros et ex. Maecenas iaculis sodales posuere. Phasellus magna diam, luctus non tempor
+		a, egestas nec lorem. Vivamus vitae neque tortor. Nam tincidunt in justo at dictum. Nullam a lacus eu sapien porta auctor.</p>
+
+	<div class="container">
+		<div id="red"><div class="t">R</div>
+        </div>
+        
+		<div id="green"><div class="t">G</div>
+        </div>
+        
+		<div id="blue"><div class="t">B</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

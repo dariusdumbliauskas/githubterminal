@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Animation Cubic</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.container {
+			position: relative;
+			background-color: rgba(66, 66, 66, 0.62);
+			width: 50vw;
+			height: 50vw;
+			margin: auto;
+		}
+
+		#red {
+
+			background-color: rgba(245, 24, 24, 0.7);
+			border: 0.25em solid #f1b2b2;
+            position: relative;
+            /*pirmine pozicija */
+			left: 20%;
+			top: 20%;
+			animation: reda 4s;
+            transition-timing-function: cubic-bezier(.28,.98,.89,.01);
+
+		}
+
+		#green {
+
+			background-color: rgba(32, 255, 35, 0.7);
+			border: 0.25em solid #a7fcb1;
+			position: absolute;
+            /* pirmine pozicija */
+			left: 20%;
+			top: 20%;
+            /* animacija */
+            animation: greena 4s;
+            transition-timing-function: cubic-bezier(.28,.98,.89,.01);
+		}
+
+		#blue {
+			background-color: rgba(44, 90, 226, 0.7);
+			border: 0.25em solid #021b89;
+			position: absolute;
+/* 			pirmine pozicija */
+			left: 20%;
+			top: 20%;
+            animation: bluea 4s;
+            transition-timing-function: cubic-bezier(.28,.98,.89,.01);
+		}
+
+
+		#red,
+		#green,
+		#blue {
+			width: 60%;
+			height: 60%;
+			border-radius: 50%;
+			color: white;
+            font-size: 3em;
+            animation-fill-mode: forwards; /* pasilieka suanimuota versija*/
+
+		}
+
+        .t {
+            text-align: center;
+            position: relative;
+            top: calc(50% - 0.5em);
+        }
+
+        /* animation */
+        
+		@keyframes reda {
+	        from {
+		    left: 20%;
+			top: 20%;    
+	        }
+
+			to {
+			top: 0.25em;
+            left: 20%;	
+			}
+        }
+        
+        @keyframes greena {
+	        from {
+		    left: 20%;
+			top: 20%;    
+	        }
+
+
+			to {
+			top: calc(40% - 0.25em);
+			left: calc(0% + 0.25em);	
+			}
+        }
+        @keyframes bluea {
+	        from {
+		    left: 20%;
+			top: 20%;    
+	        }
+
+			to {
+			top: calc(40% - 0.25em);
+			left: calc(40% - 0.25em);
+			}
+        } 
+	</style>
+</head>
+
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et pellentesque libero. Nam sit amet lacus nec enim lacinia
+		accumsan non molestie nisi. Mauris placerat arcu vel luctus laoreet. Ut est ipsum, consectetur placerat dictum id, maximus
+		sit amet velit. Praesent vel maximus risus. Nunc eget eleifend dui. Aliquam pharetra, magna porta dapibus eleifend, ipsum
+		ligula iaculis mi, vel varius mauris eros et ex. Maecenas iaculis sodales posuere. Phasellus magna diam, luctus non tempor
+		a, egestas nec lorem. Vivamus vitae neque tortor. Nam tincidunt in justo at dictum. Nullam a lacus eu sapien porta auctor.</p>
+
+	<div class="container">
+		<div id="red"><div class="t">R</div>
+        </div>
+        
+		<div id="green"><div class="t">G</div>
+        </div>
+        
+		<div id="blue"><div class="t">B</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
