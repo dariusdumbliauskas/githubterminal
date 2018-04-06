@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 5px;
+        }
+
+        /* elements */
+
+        p {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* height: 100vh; */
+            height: 1000px;
+        }
+
+        /* header */
+
+        .header {
+            flex-basis: 20%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .header-left {
+            background-color: #801515;
+            flex-basis: 75%;
+            margin-right: 5px;
+        }
+
+        .header-right {
+            background-color: #801515;
+            flex-basis: 25%;
+        }
+
+        /* main */
+
+        .main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* main columns */
+
+        .main-left {
+            background-color: #D46A6A;
+            flex-basis: calc(25% - 5px);
+            overflow: auto;
+            margin-right: 5px;
+        }
+
+        .main-center {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 5px;
+        }
+
+        .main-right {
+            flex-basis: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main/middle columns */
+
+        .main-top {
+            flex-basis: 40%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+
+        /* main-top-up down */
+
+        .main-top-up {
+            background-color: #FFAAAA;
+            flex-basis: 50%;
+            margin-bottom: 5px;
+
+        }
+
+        .main-top-down {
+            background-color: #FFAAAA;
+            flex-basis: 50%;
+
+        }
+
+        /* main bottom */
+
+        .main-bottom {
+            background-color: #FFAAAA;
+            flex-basis: 60%;
+            overflow: auto;
+        }
+
+        /* main-right */
+
+        .main-right-top {
+            background-color: #D46A6A;
+            flex-basis: 40%;
+            margin-bottom: 5px;
+
+        }
+
+        .main-right-bottom {
+            background-color: #D46A6A;
+            flex-basis: 60%;
+            overflow: auto;
+        }
+
+        /* footer */
+
+        .footer {
+            flex-basis: 20%;
+            background-color: #801515;
+            /* height: 10vmin; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <p>header-left</p>
+            </div>
+            <div class="header-right">
+                <p>header-right</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut egestas massa. Maecenas vulputate
+                    a libero cursus fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam placerat
+                    mattis lacus at consequat. Nullam ligula orci, tincidunt non mauris vitae, fermentum imperdiet libero.
+                    Nunc fermentum, lacus et ultricies porta, risus mi egestas justo, mollis egestas dui odio non ipsum.
+                    Pellentesque vel est dapibus, luctus justo pellentesque, ultricies elit. Vivamus scelerisque tortor pulvinar
+                    dolor dictum laoreet. Nam arcu lacus, lacinia ac luctus non, tempus eget eros. Pellentesque habitant
+                    morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut tristique odio nec tristique
+                    molestie. Aliquam laoreet gravida massa, nec maximus tellus consectetur ornare. Maecenas porta ullamcorper
+                    molestie. Nam velit sapien, tempor id tortor eu, vestibulum venenatis purus. Curabitur pellentesque,
+                    ex quis auctor cursus, lectus ligula iaculis purus, et pellentesque lacus nisi a justo. Ut quam massa,
+                    porttitor at dapibus ut, euismod nec nunc. Sed vel posuere leo, vehicula pretium ex. Proin at mattis
+                    justo. Duis convallis porttitor sem sit amet commodo. Maecenas nec nisl ex. Donec tempus pellentesque
+                    odio, sit amet eleifend risus dapibus ac. Proin lobortis justo non iaculis suscipit. Class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sem velit, hendrerit facilisis
+                    turpis eget, vestibulum consequat orci. Fusce tincidunt semper eros a bibendum. Cras volutpat nec nisi
+                    vitae fringilla. Fusce sed turpis eu ligula tristique malesuada et id tortor. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. In vel egestas odio. Morbi eget sem sit amet magna fringilla aliquam. Etiam
+                    ut lacus nulla. Sed porta consequat urna, quis lacinia ipsum iaculis id. Phasellus nec turpis lacinia
+                    turpis mattis eleifend. Maecenas ac enim mattis, vehicula sapien sed, euismod sem. Suspendisse pharetra
+                    nibh ut nibh lobortis, eget volutpat tellus tristique. Vestibulum velit lectus, tincidunt sed nulla nec,
+                    feugiat porttitor justo. Sed luctus metus sapien, eu hendrerit quam suscipit non. Nam id neque tempus,
+                    auctor velit in, blandit lorem. Donec at varius risus. Praesent elementum aliquet dui sit amet eleifend.
+                    Praesent vehicula, erat ut imperdiet vestibulum, ante nulla laoreet risus, in dignissim nisi turpis eget
+                    eros. Aenean at orci blandit mauris facilisis vestibulum. Aliquam laoreet volutpat augue a pellentesque.
+                    Vivamus quis dui quis est lobortis imperdiet. In hac habitasse platea dictumst. Suspendisse condimentum
+                    est ut egestas consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                    Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ipsum nisl, luctus nec pellentesque
+                    non, pellentesque ac lorem. Quisque ornare vitae tortor in vulputate. Quisque massa diam, tincidunt sit
+                    amet fringilla vitae, dignissim sit amet enim. Aliquam fermentum purus vel nisl laoreet tincidunt. Nulla
+                    facilisi.
+                </p>
+            </div>
+            <div class="main-center">
+                <div class="main-top">
+                    <div class="main-top-up">
+                        <p>main-top-up</p>
+                    </div>
+                    <div class="main-top-down">
+                        <p>main-top-down</p>
+                    </div>
+                </div>
+                <div class="main-bottom">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut egestas massa. Maecenas vulputate
+                        a libero cursus fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam
+                        placerat mattis lacus at consequat. Nullam ligula orci, tincidunt non mauris vitae, fermentum imperdiet
+                        libero. Nunc fermentum, lacus et ultricies porta, risus mi egestas justo, mollis egestas dui odio
+                        non ipsum. Pellentesque vel est dapibus, luctus justo pellentesque, ultricies elit. Vivamus scelerisque
+                        tortor pulvinar dolor dictum laoreet. Nam arcu lacus, lacinia ac luctus non, tempus eget eros. Pellentesque
+                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut tristique odio
+                        nec tristique molestie. Aliquam laoreet gravida massa, nec maximus tellus consectetur ornare. Maecenas
+                        porta ullamcorper molestie. Nam velit sapien, tempor id tortor eu, vestibulum venenatis purus. Curabitur
+                        pellentesque, ex quis auctor cursus, lectus ligula iaculis purus, et pellentesque lacus nisi a justo.
+                        Ut quam massa, porttitor at dapibus ut, euismod nec nunc. Sed vel posuere leo, vehicula pretium ex.
+                        Proin at mattis justo. Duis convallis porttitor sem sit amet commodo. Maecenas nec nisl ex. Donec
+                        tempus pellentesque odio, sit amet eleifend risus dapibus ac. Proin lobortis justo non iaculis suscipit.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec
+                        sem velit, hendrerit facilisis turpis eget, vestibulum consequat orci. Fusce tincidunt semper eros
+                        a bibendum. Cras volutpat nec nisi vitae fringilla. Fusce sed turpis eu ligula tristique malesuada
+                        et id tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel egestas odio. Morbi
+                        eget sem sit amet magna fringilla aliquam. Etiam ut lacus nulla. Sed porta consequat urna, quis lacinia
+                        ipsum iaculis id. Phasellus nec turpis lacinia turpis mattis eleifend. Maecenas ac enim mattis, vehicula
+                        sapien sed, euismod sem. Suspendisse pharetra nibh ut nibh lobortis, eget volutpat tellus tristique.
+                        Vestibulum velit lectus, tincidunt sed nulla nec, feugiat porttitor justo. Sed luctus metus sapien,
+                        eu hendrerit quam suscipit non. Nam id neque tempus, auctor velit in, blandit lorem. Donec at varius
+                        risus. Praesent elementum aliquet dui sit amet eleifend. Praesent vehicula, erat ut imperdiet vestibulum,
+                        ante nulla laoreet risus, in dignissim nisi turpis eget eros. Aenean at orci blandit mauris facilisis
+                        vestibulum. Aliquam laoreet volutpat augue a pellentesque. Vivamus quis dui quis est lobortis imperdiet.
+                        In hac habitasse platea dictumst. Suspendisse condimentum est ut egestas consequat. Vestibulum ante
+                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames
+                        ac ante ipsum primis in faucibus. Integer ipsum nisl, luctus nec pellentesque non, pellentesque ac
+                        lorem. Quisque ornare vitae tortor in vulputate. Quisque massa diam, tincidunt sit amet fringilla
+                        vitae, dignissim sit amet enim. Aliquam fermentum purus vel nisl laoreet tincidunt. Nulla facilisi.</p>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="main-right-top">
+                    <p>main-right-top</p>
+                </div>
+                <div class="main-right-bottom">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut egestas massa. Maecenas vulputate
+                        a libero cursus fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam
+                        placerat mattis lacus at consequat. Nullam ligula orci, tincidunt non mauris vitae, fermentum imperdiet
+                        libero. Nunc fermentum, lacus et ultricies porta, risus mi egestas justo, mollis egestas dui odio
+                        non ipsum. Pellentesque vel est dapibus, luctus justo pellentesque, ultricies elit. Vivamus scelerisque
+                        tortor pulvinar dolor dictum laoreet. Nam arcu lacus, lacinia ac luctus non, tempus eget eros. Pellentesque
+                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut tristique odio
+                        nec tristique molestie. Aliquam laoreet gravida massa, nec maximus tellus consectetur ornare. Maecenas
+                        porta ullamcorper molestie. Nam velit sapien, tempor id tortor eu, vestibulum venenatis purus. Curabitur
+                        pellentesque, ex quis auctor cursus, lectus ligula iaculis purus, et pellentesque lacus nisi a justo.
+                        Ut quam massa, porttitor at dapibus ut, euismod nec nunc. Sed vel posuere leo, vehicula pretium ex.
+                        Proin at mattis justo. Duis convallis porttitor sem sit amet commodo. Maecenas nec nisl ex. Donec
+                        tempus pellentesque odio, sit amet eleifend risus dapibus ac. Proin lobortis justo non iaculis suscipit.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec
+                        sem velit, hendrerit facilisis turpis eget, vestibulum consequat orci. Fusce tincidunt semper eros
+                        a bibendum. Cras volutpat nec nisi vitae fringilla. Fusce sed turpis eu ligula tristique malesuada
+                        et id tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel egestas odio. Morbi
+                        eget sem sit amet magna fringilla aliquam. Etiam ut lacus nulla. Sed porta consequat urna, quis lacinia
+                        ipsum iaculis id. Phasellus nec turpis lacinia turpis mattis eleifend. Maecenas ac enim mattis, vehicula
+                        sapien sed, euismod sem. Suspendisse pharetra nibh ut nibh lobortis, eget volutpat tellus tristique.
+                        Vestibulum velit lectus, tincidunt sed nulla nec, feugiat porttitor justo. Sed luctus metus sapien,
+                        eu hendrerit quam suscipit non. Nam id neque tempus, auctor velit in, blandit lorem. Donec at varius
+                        risus. Praesent elementum aliquet dui sit amet eleifend. Praesent vehicula, erat ut imperdiet vestibulum,
+                        ante nulla laoreet risus, in dignissim nisi turpis eget eros. Aenean at orci blandit mauris facilisis
+                        vestibulum. Aliquam laoreet volutpat augue a pellentesque. Vivamus quis dui quis est lobortis imperdiet.
+                        In hac habitasse platea dictumst. Suspendisse condimentum est ut egestas consequat. Vestibulum ante
+                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames
+                        ac ante ipsum primis in faucibus. Integer ipsum nisl, luctus nec pellentesque non, pellentesque ac
+                        lorem. Quisque ornare vitae tortor in vulputate. Quisque massa diam, tincidunt sit amet fringilla
+                        vitae, dignissim sit amet enim. Aliquam fermentum purus vel nisl laoreet tincidunt. Nulla facilisi.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>footer</p>
+        </div>
+    </div>
+</body>
+
+</html>

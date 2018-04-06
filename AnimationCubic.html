@@ -22,12 +22,12 @@
 
 			background-color: rgba(245, 24, 24, 0.7);
 			border: 0.25em solid #f1b2b2;
-            position: relative;
-            /*pirmine pozicija */
+			position: relative;
+			/*pirmine pozicija */
 			left: 20%;
 			top: 20%;
-			animation: reda 4s;
-            transition-timing-function: cubic-bezier(.28,.98,.89,.01);
+			transition: reda 4s;
+			transition-timing-function: cubic-bezier(.28, .98, .89, .01);
 
 		}
 
@@ -36,23 +36,23 @@
 			background-color: rgba(32, 255, 35, 0.7);
 			border: 0.25em solid #a7fcb1;
 			position: absolute;
-            /* pirmine pozicija */
+			/* pirmine pozicija */
 			left: 20%;
 			top: 20%;
-            /* animacija */
-            animation: greena 4s;
-            transition-timing-function: cubic-bezier(.28,.98,.89,.01);
+			/* animacija */
+			animation: greena 4s;
+			transition-timing-function: cubic-bezier(.28, .98, .89, .01);
 		}
 
 		#blue {
 			background-color: rgba(44, 90, 226, 0.7);
 			border: 0.25em solid #021b89;
 			position: absolute;
-/* 			pirmine pozicija */
+			/* 			pirmine pozicija */
 			left: 20%;
 			top: 20%;
-            animation: bluea 4s;
-            transition-timing-function: cubic-bezier(.28,.98,.89,.01);
+			animation: bluea 4s;
+			transition-timing-function: cubic-bezier(.28, .98, .89, .01);
 		}
 
 
@@ -63,20 +63,20 @@
 			height: 60%;
 			border-radius: 50%;
 			color: white;
-            font-size: 3em;
-            animation-fill-mode: forwards; /* pasilieka suanimuota versija*/
-
+			font-size: 3em;
+			animation-fill-mode: forwards;
+			/* pasilieka suanimuota versija*/
 		}
 
-        .t {
-            text-align: center;
-            position: relative;
-            top: calc(50% - 0.5em);
-        }
+		.t {
+			text-align: center;
+			position: relative;
+			top: calc(50% - 0.5em);
+		}
 
-        /* animation */
-        
-		@keyframes reda {
+		/* animation */
+
+		/* @keyframes reda {
 	        from {
 		    left: 20%;
 			top: 20%;    
@@ -110,7 +110,7 @@
 			top: calc(40% - 0.25em);
 			left: calc(40% - 0.25em);
 			}
-        } 
+        }  */
 	</style>
 </head>
 
@@ -122,13 +122,16 @@
 		a, egestas nec lorem. Vivamus vitae neque tortor. Nam tincidunt in justo at dictum. Nullam a lacus eu sapien porta auctor.</p>
 
 	<div class="container">
-		<div id="red"><div class="t">R</div>
-        </div>
-        
-		<div id="green"><div class="t">G</div>
-        </div>
-        
-		<div id="blue"><div class="t">B</div>
+		<div id="red">
+			<div class="t">R</div>
+		</div>
+
+		<div id="green">
+			<div class="t">G</div>
+		</div>
+
+		<div id="blue">
+			<div class="t">B</div>
 		</div>
 	</div>
 
