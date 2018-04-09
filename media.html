@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of the document</title>
+    <link rel="stylesheet" href="media.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #FFF8DC;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+        /* header */
+        .header {
+            background-color: lightseagreen;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .sidebar {
+            display: flex;
+            align-items: center;
+            margin-right: 50px;
+        }
+
+        .nav-item {
+            list-style-type: none;
+            margin-left: 10px;
+            color: white;
+            font-size: 1em;
+        }
+
+        #hidden {
+            display: none;
+            margin-left: 10px;
+            color: white;
+            font-size: 1em;
+        }
+
+        /* Main  */
+        .main {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .text {
+            background-color: yellowgreen;
+        }
+
+        .main-menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .menu-items {
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            background-color: tomato;
+            border: 0.1em solid black;
+            margin: 10px;
+            flex-grow: 1;
+        }
+        /* footer */
+        .footer {
+            background-color: lightskyblue;
+            width: 100%;
+            height: 100px;
+            color: white;
+            text-align: center;
+        }
+        /* media  */
+        @media (min-width: 768px) {
+
+            body {
+                margin: 5px;
+            }
+
+            .main {
+                flex-direction: row;
+                margin-bottom: 10px;
+            }
+
+            .menu-items {
+                margin: 0 10px 10px 10px;
+            }
+
+            #hidden {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <ul class="navbar">
+                <li class="nav-item">Menu1</li>
+                <li id="hidden">Menu2</li>
+                <li id="hidden">Menu3</li>
+            </ul>
+            <ul class="sidebar">
+                <li class="nav-item">Menu 4</li>
+            </ul>
+        </div>
+        <!--/header-->
+        <div class="main">
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis, ipsum aliquam consequat fringilla,
+                    sem augue efficitur libero, a fringilla sapien tellus in erat. Donec placerat fringilla quam, eget dictum
+                    mauris porta et. Duis nec dui vitae nulla euismod tempor. Donec erat odio, placerat sit amet iaculis
+                    sodales, placerat at mauris. Vestibulum egestas magna convallis, gravida urna vitae, interdum lorem.
+                    Fusce vel porttitor nibh. Nunc id varius lorem. Sed ac justo a erat laoreet eleifend. Proin lorem ex,
+                    elementum ut erat quis, efficitur eleifend quam. Cras a mi at felis aliquam tempus. Praesent ante erat,
+                    sagittis quis pretium id, convallis eget ante. Nam vulputate ornare nibh, vel faucibus orci elementum
+                    vel. Nulla ligula mauris, fermentum at mollis quis, egestas sed nisi. Ut in dapibus elit, in mollis ante.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque
+                    risus ligula, porta quis nunc eget, lobortis porttitor erat. Quisque ac dapibus quam. Nulla vitae odio
+                    vehicula elit fermentum suscipit. Nulla ultrices turpis nec ullamcorper condimentum. Aliquam faucibus
+                    tristique maximus. Suspendisse ut dui tempor, molestie lectus sit amet, tincidunt arcu. Phasellus vel
+                    egestas mi. Suspendisse accumsan sapien id est ultrices consequat. Donec sed dictum velit, eu venenatis
+                    eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin vitae augue tristique, tincidunt
+                    dolor quis, sollicitudin turpis. Nulla consectetur malesuada posuere. Proin sed faucibus lacus, ac placerat
+                    dui. Pellentesque nec egestas nunc. Aliquam ultricies congue sapien consectetur feugiat. Phasellus auctor
+                    commodo eros, eu vulputate urna fermentum nec. Cras maximus nisi cursus enim sagittis fermentum. Pellentesque
+                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse auctor odio
+                    ultricies volutpat dictum.</p>
+            </div>
+            <div class="main-menu">
+                <div class="menu-items">Reklama1</div>
+                <div class="menu-items">Reklama2</div>
+                <div class="menu-items">Reklama3</div>
+                <div class="menu-items">Reklama4</div>
+            </div>
+            <!--/main items-->
+        </div>
+        <!-- /main -->
+
+        <div class="footer">
+            <p>Kontaktai</p>
+        </div>
+    </div>
+    <!--/container-->
+</body>
+
+</html>
