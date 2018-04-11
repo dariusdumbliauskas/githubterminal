@@ -1,0 +1,18 @@
+@mixin message {
+    border: 1px solid black;
+    color: white;
+    font-size: 12px;
+
+}
+
+.error {
+    @include message;
+}
+
+.labas {
+    @include message;
+    background-color: red;
+    p {
+        font-size: 15px;
+    }
+}

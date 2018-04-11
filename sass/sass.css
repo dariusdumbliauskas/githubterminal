@@ -1,0 +1,17 @@
+.error {
+  border: 1px solid black;
+  color: white;
+  font-size: 12px;
+}
+
+.labas {
+  border: 1px solid black;
+  color: white;
+  font-size: 12px;
+  background-color: red;
+}
+
+.labas p {
+  font-size: 15px;
+}
+/*# sourceMappingURL=sass.css.map */
