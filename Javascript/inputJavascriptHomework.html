@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>title</title>
+    <style>
+    table {
+
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+tr td {
+border: 1px solid black;
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4CAF50;
+color: white;
+}
+    </style>
+</head>
+
+<body>
+    <p>Įvesti datą </p>
+    <input id="1" type="text" placeholder=''>
+    <br>
+    <p>Įvesti automobilio numerį </p>
+    <input id="2" type="text" placeholder=''>
+    <br>
+    <p>Įvesti nuvažiuotus metrus</p>
+    <input id="3" type="text" placeholder=''>
+    <br>
+    <p>Įvesti nuvažiuotą laiką sekundėmis </p>
+    <input id="4" type="text" placeholder=''>
+    <br>
+    <button type="submit" onclick="myFunction()">Įvesti</button>
+   
+
+    <h1>Lentelė</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Data</td>
+                <td>Numeris</td>
+                <td>Atstumas metrais</td>
+                <td>Laikas sekundėmis</td>
+                <td>Greitis</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+
+        function stulpelis(reiksme) { //susikuriam funkcija
+            var td = '<td>' + reiksme + '</td>';
+            return td;
+        }
+
+        function myFunction() {
+            var data = document.getElementById("1").value;
+            var numeris = document.getElementById("2").value;
+            var metrai = parseInt(document.getElementById("3").value);
+            var laikas = parseInt(document.getElementById("4").value);
+            var masyvas = [data, numeris, metrai, laikas];
+            var greitis = (masyvas[2] / masyvas[3]) * 3.6;
+            var kmh = Math.round(greitis, 0);
+            masyvas.push(kmh);
+        
+    
+            document.querySelector('tbody').innerHTML += '<tr>' +
+                stulpelis(masyvas[0]) +
+                stulpelis(masyvas[1]) +
+                stulpelis(masyvas[2]) +
+                stulpelis(masyvas[3]) +
+                stulpelis(masyvas[4]) +
+                '</tr>';
+    
+            document.getElementById("1").value = '';
+            document.getElementById("2").value = '';
+            document.getElementById("3").value = '';
+            document.getElementById("4").value = '';
+          
+        }
+
+    </script>
+</body>
+
+</html>

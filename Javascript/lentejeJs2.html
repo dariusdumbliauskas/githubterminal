@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        tr td {
+            border: 1px solid black;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+
+                <th>Data</th>
+                <th>Valst. Nr</th>
+                <th>Nuvaziuotas atstumas metrais</th>
+                <th>Keliones trukme sekundemis</th>
+                <th>Greitis - Kilometrai per valanda</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            <tr class="tr1">
+            </tr>
+            <tr class="tr2">
+            </tr>
+            <tr class="tr3">
+            </tr>
+            <tr class="tr4">
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var duomenys = [
+            ['2017-07-09 19:59:45', 'LRS123', '5000', '118'],
+            ['2014-06-11 20:59:45', 'BDE223', '7000', '208'],
+            ['2015-05-29 21:59:45', 'ZRS553', '3000', '448'],
+            ['2016-04-19 22:59:45', 'ZRZ122', '4000', '458']
+        ];
+        // masyvai masyve 
+        duomenys[2][2] = 8000; //irasau pakeitima i array/array
+
+
+
+        //sita vieta apsirasau tam kad zinociau pats kaip skaiciuojama toliau i skaiciavus sitie
+        //elementai nera itraukti 
+        var kilometrai = duomenys[0][2] / 1000; // konveruojam metrus i kilometrus
+        var valandos = duomenys[0][3] / 3600; // konvertuojam sekundes i valandas
+        var greitis = kilometrai / valandos; //kilometrai per valandas 
+
+
+        //tr1
+        var element = document.querySelector('.table-body .tr1');
+        element.innerHTML = '<td>' + duomenys[0][0] + '</td>';
+        element.innerHTML += '<td>' + duomenys[0][1] + '</td>';
+        element.innerHTML += '<td>' + duomenys[0][2] + '</td>';
+        element.innerHTML += '<td>' + duomenys[0][3] + '</td>';
+        element.innerHTML += '<td>' + ((duomenys[0][2] / 1000) / (duomenys[0][3] / 3600)).toFixed(2) + '</td>';
+        //tr2
+        var element = document.querySelector('.table-body .tr2');
+        element.innerHTML = '<td>' + duomenys[1][0] + '</td>';
+        element.innerHTML += '<td>' + duomenys[1][1] + '</td>';
+        element.innerHTML += '<td>' + duomenys[1][2] + '</td>';
+        element.innerHTML += '<td>' + duomenys[1][3] + '</td>';
+        element.innerHTML += '<td>' + ((duomenys[1][2] / 1000) / (duomenys[1][3] / 3600)).toFixed(2) + '</td>';
+
+        //tr3
+        var element = document.querySelector('.table-body .tr3');
+        element.innerHTML = '<td>' + duomenys[2][0] + '</td>';
+        element.innerHTML += '<td>' + duomenys[2][1] + '</td>';
+        element.innerHTML += '<td>' + duomenys[2][2] + '</td>';
+        element.innerHTML += '<td>' + duomenys[2][3] + '</td>';
+        element.innerHTML += '<td>' + ((duomenys[2][2] / 1000) / (duomenys[2][3] / 3600)).toFixed(2) + '</td>';
+
+        //tr4
+        var element = document.querySelector('.table-body .tr4');
+        element.innerHTML = '<td>' + duomenys[3][0] + '</td>';
+        element.innerHTML += '<td>' + duomenys[3][1] + '</td>';
+        element.innerHTML += '<td>' + duomenys[3][2] + '</td>';
+        element.innerHTML += '<td>' + duomenys[3][3] + '</td>';
+        element.innerHTML += '<td>' + ((duomenys[3][2] / 1000) / (duomenys[3][3] / 3600)).toFixed(2) + '</td>';
+
+
+
+
+    </script>
+</body>
+
+</html>

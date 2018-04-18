@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title of the document</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        tr td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="numb">
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="output"></p>
+
+
+    <h1>Lentele</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Data</td>
+                <td>Numeris</td>
+                <td>Laikas</td>
+                <td>Atstumas</td>
+                <td>Greitis</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+
+        
+    
+
+        //array 
+        var auto = [
+            ['2018-01-01', 'FFF023', 5030, 100],
+            ['2013-01-01', 'dfd023', 4460, 400],
+            ['2014-01-01', 'asd023', 3460, 200],
+            ['2018-01-01', 'FFF023', 5030, 100],
+            ['2013-01-01', 'dfd023', 4460, 400],
+            ['2014-01-01', 'asd023', 3460, 0],
+            ['2015-01-01', 'ggg023', 2340, 300]
+        ];
+
+        function stulpelis(reiksme) { //susikuriam funkcija
+            var td = '<td>' + reiksme + '</td>';
+            return td;
+        }
+
+        // loop blogas su var Text
+        var tekstas = ''; //susikuriam tuscia var 
+        for (i = 0; i < auto.length; i++) {
+            if (auto[i][3] == 0) { //kai pasiekia 0 sustoja ciklas
+                continue; //jei 'break' tai sustoja ciklas jei rasom 'continue' tai ismeta 
+                //element ir juda toliau
+            }
+            console.log(auto[i][1]); // i loopso seka, [1] masyvo elementas
+            tekstas += '<tr>' +
+                stulpelis(auto[i][0]) +
+                stulpelis(auto[i][1]) +
+                stulpelis(auto[i][2]) +
+                stulpelis(auto[i][3]) +
+                stulpelis(auto[i][2] / auto[i][3] * 3.6)
+                + '</tr>';
+        }
+
+        //isvedimas 
+        document.querySelector('tbody').innerHTML = tekstas;
+      //idedam Var tekstas,loopsa ir visa lentele is loopso
+
+
+
+    </script>
+</body>
+
+</html>

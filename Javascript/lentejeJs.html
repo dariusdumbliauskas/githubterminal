@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        tr td {
+            border: 1px solid black;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>Data</th>
+            <th>Valst. Nr</th>
+            <th>Nuvaziuotas atstumas metrais</th>
+            <th>Keliones trukme sekundemis</th>
+            <th>Greitis - Kilometrai per valanda</th>
+        </tr>
+        <tr>
+            <td id="1"></td>
+            <td id="2"></td>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+        </tr>
+    </table>
+
+    <script>
+        var duomenys = ['2017-07-09 19:59:45', 'LRS123', '5000', '118'];
+        var kilometrai = duomenys[2] / 1000; // konveruojam metrus i kilometrus
+        var valandos = duomenys[3] / 3600; // konvertuojam sekundes i valandas
+        var greitis = kilometrai / valandos; //kilometrai per valandas 
+
+        document.getElementById("1").innerHTML = duomenys[0];
+        document.getElementById("2").innerHTML = duomenys[1];
+        document.getElementById("3").innerHTML = duomenys[2];
+        document.getElementById("4").innerHTML = duomenys[3];
+        document.getElementById("5").innerHTML = greitis.toFixed(2);
+
+        document.write("Statistika :")
+        document.write("<br> nuvaziuotas atstumas " + kilometrai + " km");
+        document.write("<br> kelione truko " + valandos.toFixed(2) + " valandos");
+        document.write("<br>" + greitis.toFixed(2) + " greitis per valanda");
+
+    </script>
+</body>
+
+</html>
